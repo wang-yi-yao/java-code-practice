@@ -25,10 +25,12 @@ public class runProgram extends JFrame {
         setLocation(((int)screenWidth/2)-(windowWidth/2), ((int)screenHeight/2)-(windowHeight/2));         
         setSize(windowWidth, windowHeight);
         setVisible(true);
-
+	
+	//Add a label to the center of the window
         JLabel label = new JLabel("Hello World", SwingConstants.CENTER);
         add(label, BorderLayout.CENTER);
 
+	//Add a button that closes the window and exits the program
         JButton close = new JButton("Close");
         close.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent event) {
@@ -42,9 +44,9 @@ public class runProgram extends JFrame {
 
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				new runProgram();
-			}
-		});
+		public void run() {
+			new runProgram();
+		}
+	});
     }
 }
